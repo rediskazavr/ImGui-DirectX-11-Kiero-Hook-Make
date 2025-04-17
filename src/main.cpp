@@ -53,7 +53,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	ImGui::Begin("ImGui Window");
+	ImGui::Begin("ImGui-DirectX-11-Kiero-Hook-Make");
 	ImGui::End();
 
 	ImGui::Render();
@@ -65,12 +65,13 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
 DWORD WINAPI MainThread(LPVOID lpReserved)
 {
+	(void)lpReserved;
 	bool init_hook = false;
 	do
 	{
 		if (kiero::init(kiero::RenderType::D3D11) == kiero::Status::Success)
 		{
-			kiero::bind(8, (void**)& oPresent, hkPresent);
+			kiero::bind(8, (void**)&oPresent, (void*)hkPresent);
 			init_hook = true;
 		}
 	} while (!init_hook);
@@ -79,15 +80,17 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 
 BOOL WINAPI DllMain(HMODULE hMod, DWORD dwReason, LPVOID lpReserved)
 {
-	switch (dwReason)
-	{
-	case DLL_PROCESS_ATTACH:
-		DisableThreadLibraryCalls(hMod);
-		CreateThread(nullptr, 0, MainThread, hMod, 0, nullptr);
-		break;
-	case DLL_PROCESS_DETACH:
-		kiero::shutdown();
-		break;
-	}
-	return TRUE;
+    (void)lpReserved; // Явно указываем, что параметр не используется
+    
+    switch (dwReason)
+    {
+    case DLL_PROCESS_ATTACH:
+        DisableThreadLibraryCalls(hMod);
+        CreateThread(nullptr, 0, MainThread, hMod, 0, nullptr);
+        break;
+    case DLL_PROCESS_DETACH:
+        kiero::shutdown();
+        break;
+    }
+    return TRUE;
 }
