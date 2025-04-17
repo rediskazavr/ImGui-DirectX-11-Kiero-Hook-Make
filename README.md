@@ -13,10 +13,12 @@
 The repository is a fork of [ImGui-DirectX-11-Kiero-Hook](https://github.com/rdbo/ImGui-DirectX-11-Kiero-Hook). This repository differs in that the code has been rewritten for assembly using the make system and the g++/gcc compiler. For detailed documentation, see the original repository
 
 ## ❗️Requirements❗️
+```
 My build requires the following:
 Install via MSYS2 MinGW-w64 and windres.
 Command:
 pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-binutils
+```
 
 ## 💽Addition💽
 A dll injector was also made for this repository. You can check it out here
