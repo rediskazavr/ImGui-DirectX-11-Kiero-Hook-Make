@@ -1,9 +1,4 @@
-# ImGui-DirectX-11-Kiero-Hook-Make
-
-[![GitHub Stars](https://img.shields.io/github/stars/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make.svg?style=social&label=Star)](https://github.com/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make)
-[![GitHub Forks](https://img.shields.io/github/forks/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make.svg?style=social&label=Fork)](https://github.com/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make)
-[![GitHub Issues](https://img.shields.io/github/issues/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make.svg)](https://github.com/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make/issues)
-[![License](https://img.shields.io/github/license/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make.svg)](https://github.com/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make/blob/master/LICENSE)
+# Injector for ImGui-DirectX-11-Kiero-Hook-Make
 
 <p align="center">
   <img src="./docs/latte.png" width="400" />
