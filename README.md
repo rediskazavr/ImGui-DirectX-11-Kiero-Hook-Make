@@ -5,7 +5,7 @@
 </p>
 
 ## 📩 About 📩
-Simple DLL Injector Written in C++
+DLL injector written in C++ and uses the ax3-tools template
 
 ## ❓How to use❓
 * Specify the path to the dll file first
