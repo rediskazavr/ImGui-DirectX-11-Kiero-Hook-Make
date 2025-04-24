@@ -85,9 +85,7 @@ int InjectDLL(DWORD PID, char* dll){
     }
 }
 
-int main(){
-    SetConsoleTitle("Injector");
-
+int main_func(){
     int PID = -1;
     char *dll = new char[255];
 
