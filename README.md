@@ -13,3 +13,5 @@ DLL injector written in C++ and uses the [ax3-tools](http://github.com/rediskaza
 ## ❓How to use❓
 * Specify the path to the dll file first
 * Then specify the PID of the process. You can find it in the Task Manager by enabling the display of the process ID
+
+[![Stargazers over time](https://starchart.cc/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make.svg?variant=adaptive)](https://starchart.cc/rediskazavr/ImGui-DirectX-11-Kiero-Hook-Make)
